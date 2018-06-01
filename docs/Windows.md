@@ -1,9 +1,9 @@
 This guide assumes you have completed on-boarding and cloned the [developer rig repository](https://github.com/twitchdev/developer-rig) and nothing else.
 
 1.  Install all dependencies.
-    1.  [Node LTS](https://nodejs.org/en/dist/v8.11.2/node-v8.11.2-x64.msi).  If you already have Node installed, it must be at least version 6.
+    1.  [Node LTS](https://nodejs.org/en/download/).  If you already have Node installed, it must be at least version 6.
     2.  [Yarn](https://yarnpkg.com/lang/en/docs/install).
-    3.  [Python 2](https://www.python.org/ftp/python/2.7.15/python-2.7.15.amd64.msi).
+    3.  [Python 2](https://www.python.org/downloads/release/python-2715/).
     4.  [Git for Windows](https://github.com/git-for-windows/git/releases/download/v2.17.1.windows.2/Git-2.17.1.2-64-bit.exe).  Its shell is used in subsequent steps.
 2.  Add `127.0.0.1 localhost.rig.twitch.tv` to `/etc/hosts`.
     1.  Press the Windows key.

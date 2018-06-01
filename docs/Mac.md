@@ -1,9 +1,9 @@
 This guide assumes you have completed on-boarding and cloned the [developer rig repository](https://github.com/twitchdev/developer-rig) and nothing else.
 
 1.  Install all dependencies.  (It is possible to use **brew** for all of these but it will want to install version 10 of Node which causes some developer rig dependencies to fail to install.)
-    1.  [Node LTS](https://nodejs.org/dist/v8.11.2/node-v8.11.2.pkg).  If you already have Node installed, it must be at least version 6.
+    1.  [Node LTS](https://nodejs.org/en/download/).  If you already have Node installed, it must be at least version 6.
     2.  [Yarn](https://yarnpkg.com/lang/en/docs/install).
-    3.  [Python 2](https://www.python.org/ftp/python/2.7.15/python-2.7.15-macosx10.9.pkg).
+    3.  [Python 2](https://www.python.org/downloads/release/python-2715/).
     4.  [Git](https://git-scm.com/download/mac).
 2.  Add `127.0.0.1 localhost.rig.twitch.tv` to `/etc/hosts`.
     1.  Open a terminal window.
