@@ -41,8 +41,8 @@ This guide assumes you have completed on-boarding and nothing else.
 8.  Open another terminal window and execute these commands in the same directory as above.
     1.  `cd developer-rig`
     2.  `yarn start -s '`_your extension secret_`' -c ../config.json`
-9.  This will open [https://localhost.rig.twitch.tv:3000/](https://localhost.rig.twitch.tv:3000/).  If necessary, allow the certificate.  What you will see is the developer rig with no extension views.
-10.  Make the required configuration changes.
+9.  This will open [https://localhost.rig.twitch.tv:3000/](https://localhost.rig.twitch.tv:3000/).  If necessary, allow the certificate.  You will see the developer rig with no extension views.
+9.  Make the required configuration changes.
     1.  Go back to your dev.twitch.tv browser session.
     2.  Click the **Versions** tab then click **Manage**.
     3.  Click **Asset Hosting**.
@@ -52,8 +52,8 @@ This guide assumes you have completed on-boarding and nothing else.
     7.  Go back to your developer rig browser session.
     8.  Click **Configurations**.  The **Dev Rig Configurations** dialog will open.
     9.  Verify the `viewer_url` is `https://localhost.rig.twitch.tv:8080/viewer.html`.  Since it might take a while for the change to take effect as it propagates through Twitch's internal systems, click **Refresh** until you see the change.
-    10.  Click **Cancel**.
-11.  Verify the rig is working.
+    9.  Click **Cancel**.
+9.  Verify the rig is working.
     1.  Click the **+** button.  The **Add a new view** panel will appear.
     2.  Select the **Broadcaster** viewer type and click **Save**.  The Broadcaster view will appear.
     3.  Click **Yes, I would**.  Verify the color changes and there is output to match that request in the second terminal window.
