@@ -25,10 +25,10 @@ This guide assumes you have completed on-boarding and nothing else.
     4.  `echo '{
           "clientID": "`_your client ID_`",
           "version": "0.0.1",
-          "channel": "rig-`_your Twitch user name_`",
+          "channel": "RIG`_your Twitch user name_`",
           "ownerName": "`_your Twitch user name_`"
         }' > ../config.json`  
-        \# Your client ID is available in the **Overview** tab of your extension.  Your Twitch user name is displayed in the top-right corner of twitch.tv when you are signed in.
+        \# Your client ID is available in the **Overview** tab of your extension.  Your Twitch user name is displayed in the top-right corner of twitch.tv when you are signed in.  The channel name must be alphabetic.  For instance, if your Twitch user name is `dallas`, use the channel name `RIGdallas`.
     5.  `yarn extension-init -l ../my-extension`  
         \# You may replace `my-extension` with a different directory name here and in subsequent steps.
     6.  `node scripts/ssl.js`
@@ -81,8 +81,11 @@ You need to allow the certificate for the viewer.  See step 5 above.
 _When I add the **Broadcaster** viewer type or when I click the **Yes, I would** button, I see **EBS request returned (error)** messages in the rig console._  
 You need to allow the certificate for the EBS.  See step 7 above.
 
+_The color updates only in the view in which I clicked the **Yes, I would** button._  
+Verify your channel name is alphabetic.  It may not contain any other characters, such as hyphens, numbers, and underscores.
+
 _I changed the **channel** in the configuration and now the color updates only in the view in which I clicked the **Yes, I would** button._  
-This is a known issue.  Currently, once you create your extension and start using a channel, you may not change it to a different one.  If, after changing it back, you still experience this issue, clear the local storage for the developer rig in your browser.  This will necessitate recreating the views in the rig.
+This is a known issue.  Currently, once you create your extension and start using a channel, you may not change it to a different one.  If, after changing it back, you still experience this issue, clear the local storage for the developer rig (https://localhost.rig.twitch.tv:3000/) in your browser.  This will necessitate recreating the views in the rig.
 
 _I see **EBS request returned Too Many Requests (error)** messages in the rig console._  
 Twitch uses rate limiting to prevent overloading our systems.  Your EBS and your extension will need to account for this and other HTTP errors.
