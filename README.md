@@ -17,6 +17,7 @@ The Developer Rig is a tool that enables [Twitch Extensions](https://dev.twitch.
 ## Quick Links
 * [Overview](#overview)
 * [Getting Started](#getting-started)
+  * [Step-by-step](#step-by-step)
   * [Requirements](#requirements)
   * [Configuring the Developer Rig](#configuring-the-developer-rig)
   * [Starting the Developer Rig](#starting-the-developer-rig)
@@ -48,6 +49,9 @@ Extension output logs can be redirected to the [Rig Console](#rig-console), a De
 
 ## Getting Started
 [Clone this repository!](https://github.com/twitchdev/developer-rig)
+
+### Step-by-step
+If you absolutely cannot wait to start, here are guides for [Mac](docs/Mac.html) and [Windows](docs/Windows.html) to get you from nothing to Hello World.
 
 ### Requirements
 This project requires `yarn` and `NodeJS`. Both must be installed to use the Developer Rig.
