@@ -1,4 +1,4 @@
-This guide assumes you have completed on-boarding and cloned the [developer rig repository](https://github.com/twitchdev/developer-rig) and nothing else.
+This guide assumes you have completed on-boarding and nothing else.
 
 1.  Install all dependencies.
     1.  [Node LTS](https://nodejs.org/en/download/).  If you already have Node installed, it must be at least version 6.
