@@ -51,7 +51,7 @@ Extension output logs can be redirected to the [Rig Console](#rig-console), a De
 [Clone this repository!](https://github.com/twitchdev/developer-rig)
 
 ### Step-by-step
-If you absolutely cannot wait to start, here are guides for [Mac](docs/Mac.html) and [Windows](docs/Windows.html) to get you from nothing to Hello World.
+If you absolutely cannot wait to start, here are guides for [Mac](docs/Mac.md) and [Windows](docs/Windows.md) to get you from nothing to Hello World.
 
 ### Requirements
 This project requires `yarn` and `NodeJS`. Both must be installed to use the Developer Rig.
