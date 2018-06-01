@@ -41,7 +41,7 @@ This guide assumes you have completed on-boarding and cloned the [developer rig 
 8.  Open another terminal window and execute these commands in the same directory as above.
     1.  `cd developer-rig`
     2.  `yarn start -s '`_your extension secret_`' -c ../config.json`
-9.  This will open [https://localhost.rig.twitch.tv:3000/](https://localhost.rig.twitch.tv:3000/).  If necessary, allow the certificate.  What you see is the developer rig with no extension views.
+9.  This will open [https://localhost.rig.twitch.tv:3000/](https://localhost.rig.twitch.tv:3000/).  If necessary, allow the certificate.  What you will see is the developer rig with no extension views.
 10.  Make the required configuration changes.
     1.  Go back to your dev.twitch.tv browser session.
     2.  Click the **Versions** tab then click **Manage**.
@@ -56,10 +56,10 @@ This guide assumes you have completed on-boarding and cloned the [developer rig 
 11.  Verify the rig is working.
     1.  Click the **+** button.  The **Add a new view** panel will appear.
     2.  Select the **Broadcaster** viewer type and click **Save**.  The Broadcaster view will appear.
-    3.  Click **Yes, I would**.  Verify the color changes and there is output to match that request in the second Git Bash shell.
+    3.  Click **Yes, I would**.  Verify the color changes and there is output to match that request in the second terminal window.
     4.  Click the **+** button again.  The **Add a new view** panel will appear.
     5.  Select the **Logged-Out Viewer** viewer type and click **Save**.  The Logged-Out Viewer view will appear.
-    6.  Click **Yes, I would**.  Verify the color changes in both views and there is output to match that request in the second Git Bash shell.
+    6.  Click **Yes, I would**.  Verify the color changes in both views and there is output to match that request in the second terminal window.
 
 ### Issues
 

@@ -48,7 +48,7 @@ This guide assumes you have completed on-boarding and cloned the [developer rig 
 8.  Open another **Git Bash** and execute these commands in the same directory as above.
     1.  `cd developer-rig`
     2.  `yarn start -s '`_your extension secret_`' -c ../config.json`
-9.  This will open [https://localhost.rig.twitch.tv:3000/](https://localhost.rig.twitch.tv:3000/).  Allow the certificate.  What you see is the developer rig with no extension views.
+9.  This will open [https://localhost.rig.twitch.tv:3000/](https://localhost.rig.twitch.tv:3000/).  Allow the certificate.  What you will see is the developer rig with no extension views.
 10.  Make the required configuration changes.
     1.  Go back to your dev.twitch.tv browser session.
     2.  Click the **Versions** tab then click **Manage**.
