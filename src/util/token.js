@@ -33,15 +33,22 @@ export function createToken(newRole, isLinked, ownerID, channelId, secret, opaqu
 }
 
 export function createSignedToken(role, opaqueUserId, userId, channelId, secret) {
+  let pubsub_perms = {
+      listen: ['broadcast', 'global'],
+  }
+  if (role === 'broadcaster' ) {
+    pubsub_perms.send = ['broadcast']
+  } else if (role === RIG_ROLE) {
+    pubsub_perms.send = ['*']
+    pubsub_perms.listen = ['*']
+  }
+
   const payload = {
     exp: Math.floor(((Date.now() + ONE_YEAR_MS) / 1000)),
     opaque_user_id: opaqueUserId,
     channel_id: channelId,
     role: role,
-    pubsub_perms: {
-      listen: ['broadcast'],
-      send: ['*'],
-    },
+    pubsub_perms: pubsub_perms,
   };
 
   if (userId !== '') {

@@ -262,8 +262,13 @@ _The Extension I have specified is not appearing the Developer Rig._
 
 _I am certain that my Developer Rig Configuration is correct, but my Extension is still not working._
 
-> Clear your browser cache and local storage, restart the Developer Rig, and cross your fingers. To delete the rig's local storage open the javascript console in your browser on a tab with the rig open and do `localStorage.clear();` then refresh.
+> Clear your browser cache and local storage, restart the Developer Rig, and cross your fingers. To delete the rig's local storage open the javascript console in your browser on a tab with the rig open and do `localStorage.clear();` then refresh. Ensure you've included the [Twitch Extension Helper](https://extension-files.twitch.tv/helper/v1/twitch-ext.min.js) is included in your front end files.
 
 _I see an error when attempting to run 'yarn test'._
 
 > Sometimes deleting and reinstalling your `node_modules` can correct this issue. On MacOS, you may need to explicitly install watchman via `brew install watchman`.
+
+
+_`yarn install` fails in libssh2_
+
+> See issue [#48](https://github.com/twitchdev/developer-rig/issues/48). Be sure libssh, and it's dependencies are installed.
