@@ -46,8 +46,7 @@ describe('token', () => {
       channel_id: channelId,
       opaque_user_id: 'ARIG'+ouid,
       pubsub_perms: {
-        listen: [],
-        send: [],
+        listen: ['broadcast'],
       },
       role: 'viewer',
     };
@@ -56,8 +55,7 @@ describe('token', () => {
       channel_id: channelId,
       opaque_user_id: 'URIG'+ouid,
       pubsub_perms: {
-        listen: [],
-        send: [],
+        listen: ['broadcast'],
       },
       role: 'viewer',
     };
@@ -66,8 +64,7 @@ describe('token', () => {
       channel_id: channelId,
       opaque_user_id: 'URIG'+ouid,
       pubsub_perms: {
-        listen: [],
-        send: [],
+        listen: ['broadcast'],
       },
       role: 'viewer',
       user_id: 'RIG'+ownerId,
@@ -77,8 +74,8 @@ describe('token', () => {
       channel_id: channelId,
       opaque_user_id: 'URIG'+ouid,
       pubsub_perms: {
-        listen: [],
-        send: [],
+        listen: ['broadcast'],
+        send: ['broadcast'],
       },
       role: 'broadcaster',
       user_id: 'RIG'+ownerId,
@@ -90,13 +87,18 @@ describe('token', () => {
 
       expect(payload.opaque_user_id).toBe(LOGGED_OUT_PAYLOAD.opaque_user_id);
       expect(payload.role).toBe(LOGGED_OUT_PAYLOAD.role);
+      expect(payload.pubsub_perms.send).toBeUndefined();
+      expect(payload.pubsub_perms.listen).toEqual(['broadcast','global']);
     });
 
     it('should create a token for logged in unlinked users', () => {
       const token = createToken(ViewerTypes.LoggedIn, isLinked, ownerId, channelId, secret, ouid);
       const payload = jwt.verify(token, secret);
+
       expect(payload.opaque_user_id).toBe(LOGGED_IN_UNLINKED_PAYLOAD.opaque_user_id);
       expect(payload.role).toBe(LOGGED_IN_UNLINKED_PAYLOAD.role);
+      expect(payload.pubsub_perms.send).toBeUndefined();
+      expect(payload.pubsub_perms.listen).toEqual(['broadcast','global']);
     });
 
     it('should create a token for logged in linked users', () => {
@@ -106,6 +108,8 @@ describe('token', () => {
       expect(payload.opaque_user_id).toBe(LOGGED_IN_LINKED_PAYLOAD.opaque_user_id);
       expect(payload.user_id).toBe(LOGGED_IN_LINKED_PAYLOAD.user_id);
       expect(payload.role).toBe(LOGGED_IN_LINKED_PAYLOAD.role);
+      expect(payload.pubsub_perms.send).toBeUndefined();
+      expect(payload.pubsub_perms.listen).toEqual(['broadcast','global']);
     });
 
     it('should create a token for broadcaster users', () => {
@@ -115,6 +119,8 @@ describe('token', () => {
       expect(payload.opaque_user_id).toBe(BROADCASTER_PAYLOAD.opaque_user_id);
       expect(payload.role).toBe(BROADCASTER_PAYLOAD.role);
       expect(payload.user_id).toBe(BROADCASTER_PAYLOAD.user_id)
+      expect(payload.pubsub_perms.send).toEqual(['broadcast']);
+      expect(payload.pubsub_perms.listen).toEqual(['broadcast','global']);
     });
 
     it('should create a token for the rig', () => {
@@ -122,6 +128,8 @@ describe('token', () => {
       const payload = jwt.verify(token, secret);
 
       expect(payload.role).toBe(RIG_ROLE);
+      expect(payload.pubsub_perms.send).toEqual(['*']);
+      expect(payload.pubsub_perms.listen).toEqual(['*']);
     });
 
     it('generateOpaqueId should generate an opaque ID we expect', () => {
