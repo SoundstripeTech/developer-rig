@@ -170,7 +170,7 @@ export function fetchProducts(host, clientId, token, onSuccess, onError) {
           inDevelopment: p.inDevelopment ? 'true' : 'false',
           broadcast: p.broadcast ? 'true' : 'false',
           deprecated: p.expiration ? Date.parse(p.expiration) <= Date.now() : false,
-          validationErrors: {}
+          savedInCatalog: true,
         };
 
         return product;

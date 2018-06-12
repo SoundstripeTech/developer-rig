@@ -6,6 +6,7 @@ import { ExtensionRigConsole } from '../console';
 import { ExtensionViewDialog } from '../extension-view-dialog';
 import { RigConfigurationsDialog } from '../rig-configurations-dialog';
 import { EditViewDialog } from '../edit-view-dialog';
+import { ProductManagementViewContainer } from '../product-management-container';
 import { createExtensionObject } from '../util/extension';
 import { createSignedToken } from '../util/token';
 import { fetchManifest, fetchExtensionManifest, fetchUserInfo } from '../util/api';
@@ -17,7 +18,6 @@ import { MobileSizes } from '../constants/mobile';
 import { RIG_ROLE } from '../constants/rig';
 import { userLogin } from '../core/actions/user-session';
 import { store } from '../core/rig';
-import { ProductManagementViewContainer } from '../product-management-container/component';
 const { ExtensionMode, ExtensionViewType } = window['extension-coordinator'];
 
 export class Rig extends Component {

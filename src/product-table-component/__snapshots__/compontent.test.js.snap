@@ -47,6 +47,7 @@ ShallowWrapper {
 >
           <input
                     className="form__input"
+                    disabled={undefined}
                     maxLength="255"
                     name="sku"
                     onChange={undefined}
@@ -195,6 +196,7 @@ ShallowWrapper {
           "children": Array [
             <input
               className="form__input"
+              disabled={undefined}
               maxLength="255"
               name="sku"
               onChange={undefined}
@@ -214,6 +216,7 @@ ShallowWrapper {
             "nodeType": "host",
             "props": Object {
               "className": "form__input",
+              "disabled": undefined,
               "maxLength": "255",
               "name": "sku",
               "onChange": undefined,
@@ -586,6 +589,7 @@ ShallowWrapper {
 >
             <input
                         className="form__input"
+                        disabled={undefined}
                         maxLength="255"
                         name="sku"
                         onChange={undefined}
@@ -734,6 +738,7 @@ ShallowWrapper {
             "children": Array [
               <input
                 className="form__input"
+                disabled={undefined}
                 maxLength="255"
                 name="sku"
                 onChange={undefined}
@@ -753,6 +758,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "className": "form__input",
+                "disabled": undefined,
                 "maxLength": "255",
                 "name": "sku",
                 "onChange": undefined,

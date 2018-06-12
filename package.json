@@ -91,9 +91,8 @@
     },
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx,mjs}",
-      "!src/**/index.js",
-      "!src/**/index.ts",
-      "!src/**/container.ts",
+      "!src/**/index.{js,ts}",
+      "!src/**/container.{js,ts}",
       "!src/tests/**",
       "!src/core/models/**"
     ],

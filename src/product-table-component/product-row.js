@@ -28,6 +28,7 @@ export const ProductRow = (props) => {
           name="sku"
           required
           maxLength="255"
+          disabled={props.product.savedInCatalog}
           value={props.product.sku}
           onChange={props.handleValueChange}
         />

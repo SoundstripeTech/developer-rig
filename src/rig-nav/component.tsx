@@ -50,7 +50,7 @@ export class RigNavComponent extends React.Component<Props> {
           <a
             className={this.props.selectedView === CONFIGURATIONS ? "top-nav-item top-nav-item__selected" : "top-nav-item"}
             onClick={(event) => this.openConfigurationsHandler()}>Configurations</a>
-          {this.props.bitsEnabled && 
+          {this.props.session && this.props.bitsEnabled && 
             <a
               className={this.props.selectedView === PRODUCT_MANAGEMENT ? "top-nav-item top-nav-item__selected" : "top-nav-item"}
               onClick={(event) => this.props.openProductManagementHandler()}>Manage Products</a>

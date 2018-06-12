@@ -6,7 +6,6 @@ import { UserDropdown } from '../user-dropdown';
 
 describe('<RigNavComponent />', () => {
   const defaultGenerator = () => ({
-    bitsEnabled: true,
     openConfigurationsHandler: jest.fn(),
     openProductManagementHandler: jest.fn(),
     viewerHandler: jest.fn(),
@@ -32,7 +31,10 @@ describe('<RigNavComponent />', () => {
   });
 
   it('correctly handles clicks on each tab', () => {
-    const { wrapper } = setupRenderer();
+    const { wrapper } = setupRenderer({
+      bitsEnabled: true,
+      session: { login: 'test', profileImageUrl: 'test.png', authToken: 'test'},
+    });
     wrapper.find('a.top-nav-item').forEach((tab: any) => {
       tab.simulate('click');
     });
@@ -69,6 +71,8 @@ describe('<RigNavComponent />', () => {
     
     wrapper.setProps({
       selectedView: PRODUCT_MANAGEMENT,
+      bitsEnabled: true,
+      session: { login: 'test', profileImageUrl: 'test.png', authToken: 'test'},
     });
     wrapper.update();
     expect(wrapper.find('.top-nav-item__selected')).toHaveLength(1);
@@ -88,10 +92,11 @@ describe('<RigNavComponent />', () => {
     expect(wrapper.find(UserDropdown));
   });
 
-  it('correctly hides the Product Management tab when extension is bits enabled', () => {
+  it('renders the Product Management tab when extension is bits enabled and the user is logged in', () => {
     const { wrapper } = setupRenderer({
-      bitsEnabled: false
+      bitsEnabled: true,
+      session: { login: 'test', profileImageUrl: 'test.png', authToken: 'test'},
     });
-    expect(wrapper.findWhere(el => el.text() === 'Manage Products').exists()).toBe(false);
+    expect(wrapper.findWhere(el => el.text() === 'Manage Products').exists()).toBe(true);
   })
 });

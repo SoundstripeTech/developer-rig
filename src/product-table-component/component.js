@@ -101,6 +101,7 @@ export class ProductTableComponent extends Component {
 
     this.state.products.forEach((p, i) => {
       const matchingSkus = skus.filter(sku => sku === p.sku);
+      p.validationErrors = p.validationErrors || {};
       if (matchingSkus.length > 1) {
         p.validationErrors = {
           ...p.validationErrors,
@@ -110,7 +111,7 @@ export class ProductTableComponent extends Component {
         delete p.validationErrors.sku;
       }
 
-      if (p.validationErrors && Object.keys(p.validationErrors).length > 0) {
+      if (Object.keys(p.validationErrors).length > 0) {
         disableSaveButton = true;
       }
 
@@ -239,6 +240,7 @@ export class ProductTableComponent extends Component {
 
   _handleSaveProductSuccess(index) {
     const partial = {
+      savedInCatalog: true,
       dirty: false
     };
     this._updateProduct(index, partial);
