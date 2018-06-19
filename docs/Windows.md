@@ -51,10 +51,10 @@ This guide assumes you have completed on-boarding and nothing else.
 9.  This will open [https://localhost.rig.twitch.tv:3000/](https://localhost.rig.twitch.tv:3000/).  Allow the certificate.  You will see the developer rig with no extension views.
 9.  Make the required configuration changes.
     1.  Go back to your dev.twitch.tv browser session.
-    2.  Click the **Versions** tab then click **Manage**.
+    2.  Click the **Versions** tab then click **Manage**.  If there is no such button, you're already on the right page.
     3.  Click **Asset Hosting**.
     4.  Change **Testing Base URI** from `https://localhost:8080/` to `https://localhost.rig.twitch.tv:8080/`.
-    5.  Change **Panel Viewer Path** from `panel.html` to `viewer.html`.
+    5.  If you created a panel extension, change **Panel Viewer Path** from `panel.html` to `viewer.html`.
     6.  Click **Save Changes**.
     7.  Go back to your developer rig browser session.
     8.  Click **Configurations**.  The **Dev Rig Configurations** dialog will open.
