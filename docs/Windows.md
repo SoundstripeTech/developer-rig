@@ -22,16 +22,9 @@ This guide assumes you have completed on-boarding and nothing else.
     1.  `git clone https://github.com/twitchdev/developer-rig`
     2.  `cd developer-rig`
     3.  `yarn install` # This takes about half a minute.
-    4.  `echo '{
-          "clientID": "`_your client ID_`",
-          "version": "0.0.1",
-          "channel": "RIG`_your Twitch user name_`",
-          "ownerName": "`_your Twitch user name_`"
-        }' > ../config.json`  
-        \# Your client ID is available in the **Overview** tab of your extension.  Your Twitch user name is displayed in the top-right corner of twitch.tv when you are signed in.  The channel name must be alphabetic.  For instance, if your Twitch user name is `dallas`, use the channel name `RIGdallas`.
-    5.  `yarn extension-init -l ../my-extension`  
+    4.  `yarn extension-init -l ../my-extension`  
         \# You may replace `my-extension` with a different directory name here and in subsequent steps.
-    6.  `node scripts/ssl.js`
+    5.  `node scripts/ssl.js`
     7.  `mkdir ../my-extension/conf`
     8.  `mv ssl/selfsigned.crt ../my-extension/conf/server.crt`
     9.  `mv ssl/selfsigned.key ../my-extension/conf/server.key`
@@ -42,12 +35,19 @@ This guide assumes you have completed on-boarding and nothing else.
     2.  `npm install`
     3.  `curl -H 'Client-ID: `_your client ID_`' -X GET 'https://api.twitch.tv/helix/users?login=`_your Twitch user name_`' | sed -e 's/.*"id":"//' -e 's/".*//'`  
         \# This will print your Twitch user ID for the next step.
+        \# Your client ID is available in the **Overview** tab of your extension.  Your Twitch user name is displayed in the top-right corner of twitch.tv when you are signed in.  The channel name must be alphabetic.  For instance, if your Twitch user name is `dallas`, use the channel name `RIGdallas`.
     4.  `node services/backend -c '`_your client ID_`' -s '`_your extension secret_`' -o '`_your Twitch user ID_`'`  
         Your extension secret is in the **Secret Keys** section in the **Settings** tab of your extension.
 7.  Visit [https://localhost:8081](https://localhost:8081).  Allow the certificate.  You will see some JSON describing a 404 response.
 8.  Open another **Git Bash** and execute these commands in the same directory as above.
     1.  `cd developer-rig`
-    2.  `yarn start -s '`_your extension secret_`' -c ../config.json`
+    2.  `echo '{
+          "clientID": "`_your client ID_`",
+          "version": "0.0.1",
+          "channel": "RIG`_your Twitch user name_`",
+          "ownerName": "`_your Twitch user name_`"
+        }' > ../config.json`  
+    3.  `yarn start -s '`_your extension secret_`' -c ../config.json`
 9.  This will open [https://localhost.rig.twitch.tv:3000/](https://localhost.rig.twitch.tv:3000/).  Allow the certificate.  You will see the developer rig with no extension views.
 9.  Make the required configuration changes.
     1.  Go back to your dev.twitch.tv browser session.
