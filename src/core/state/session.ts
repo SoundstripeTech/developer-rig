@@ -3,21 +3,22 @@ import { GlobalState } from '../models/global-state';
 import * as sessionActions from '../actions/user-session';
 
 export interface SessionState {
-  sessionReceived: boolean;
   userSession?: UserSession;
 }
 
-export const getInitialState = (): SessionState => ({
-  sessionReceived: false,
-});
+export const getInitialState = (): SessionState => ({});
 
 export function sessionReducer(state = getInitialState(), action: sessionActions.All): SessionState {
   switch (action.type) {
     case sessionActions.USER_LOGIN:
       return {
         ...state,
-        sessionReceived: true,
         userSession: action.userSession,
+      };
+    case sessionActions.USER_LOGOUT:
+      return {
+        ...state,
+        userSession: undefined,
       };
     default:
       return state;

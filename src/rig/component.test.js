@@ -239,19 +239,12 @@ describe('<Rig />', () => {
       expect(frameSize).toEqual(expectedOverlayFrameSize);
     });
 
-    it('correctly sets the login if login in localStorage', () => {
-      setupLoginForTest();
+    it('correctly fetches user info if login not in localStorage', () => {
       global.fetch = jest.fn().mockImplementation(mockFetchForUserInfo);
       global.window.location.hash = 'access_token=test&';
 
-      const { wrapper } = setupShallow({
-        store: store.getReduxStore()
-      });
-      const expectedLogin = {
-        login: 'test',
-        profileImageUrl: 'test.png',
-        authToken: 'test',
-      }
+      const { wrapper } = setupShallow();
+      expect(global.fetch).toHaveBeenCalled();
     });
   });
 });

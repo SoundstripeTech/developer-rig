@@ -530,7 +530,11 @@ ShallowWrapper {
       "children": <div
         style={
                 Object {
+                        "border": "1px solid #7D55C7",
                         "height": "0.009765625px",
+                        "left": "20px",
+                        "position": "absolute",
+                        "top": "20px",
                         "transform": "scale(1024)",
                         "transformOrigin": "0 0",
                         "width": "0.009765625px",
@@ -643,7 +647,11 @@ ShallowWrapper {
           type="component"
 />,
         "style": Object {
+          "border": "1px solid #7D55C7",
           "height": "0.009765625px",
+          "left": "20px",
+          "position": "absolute",
+          "top": "20px",
           "transform": "scale(1024)",
           "transformOrigin": "0 0",
           "width": "0.009765625px",
@@ -715,7 +723,11 @@ ShallowWrapper {
         "children": <div
           style={
                     Object {
+                              "border": "1px solid #7D55C7",
                               "height": "0.009765625px",
+                              "left": "20px",
+                              "position": "absolute",
+                              "top": "20px",
                               "transform": "scale(1024)",
                               "transformOrigin": "0 0",
                               "width": "0.009765625px",
@@ -828,7 +840,11 @@ ShallowWrapper {
             type="component"
 />,
           "style": Object {
+            "border": "1px solid #7D55C7",
             "height": "0.009765625px",
+            "left": "20px",
+            "position": "absolute",
+            "top": "20px",
             "transform": "scale(1024)",
             "transformOrigin": "0 0",
             "width": "0.009765625px",

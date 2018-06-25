@@ -86,7 +86,6 @@ export function fetchExtensionManifest(host, clientId, version, jwt, onSuccess, 
 export function fetchManifest(host, clientId, username, version, channelId, secret, onSuccess, onError) {
   if (!username || !clientId || !version || !channelId || !secret) {
     onError(missingConfigurations({
-      'EXT_OWNER_NAME': username,
       'EXT_CLIENT_ID': clientId,
       'EXT_VERSION': version,
       'EXT_CHANNEL': channelId,

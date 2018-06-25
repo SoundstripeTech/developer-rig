@@ -29,6 +29,7 @@ export class ExtensionComponentView extends Component {
 
     if (extension.views.component.zoom) {
       viewStyles = {
+        ...viewStyles,
         width: `${sizeFromView.width / sizeFromView.zoomScale}px`,
         height: `${sizeFromView.height / sizeFromView.zoomScale}px`,
         transformOrigin: '0 0',

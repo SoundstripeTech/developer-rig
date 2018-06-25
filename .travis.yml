@@ -3,6 +3,7 @@ language: node_js
 
 # Lock compatible node versions
 node_js:
+  - "node"
   - "9"
   - "8"
 

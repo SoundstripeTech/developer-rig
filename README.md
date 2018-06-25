@@ -52,8 +52,10 @@ Extension output logs can be redirected to the [Rig Console](#rig-console), a De
 ### Requirements
 This project requires `yarn` and `NodeJS`. Both must be installed to use the Developer Rig.
 
+Additionally, to pull in the sample [Hello World project](https://github.com/TwitchDev/extensions-hello-world), it requires that Git is in your local PATH.
+
 #### Installing Dependencies
-To install `Node.js`, [follow the instructions here](https://nodejs.org/en/download/current/). By default, this installs the NPM package manager (`npm`), however, in all of our documentation we reference the use of Yarn which you can install by [following the instructions here](https://yarnpkg.com/lang/en/docs/install).
+To install `Node.js`, [follow the instructions here](https://nodejs.org/en/download/). By default, this installs the NPM package manager (`npm`), however, in all of our documentation we reference the use of Yarn which you can install by [following the instructions here](https://yarnpkg.com/lang/en/docs/install).
 
 Once you have Yarn installed, simply run the command `yarn install` from the root of the cloned repository to fetch all the dependencies need to run the Developer Rig.
 ```bash
@@ -254,6 +256,7 @@ _What browsers are supported?_
 
 > We know that the Developer Rig works in Chrome. Feel free to help ensure it works in other browsers!
 
+
 ## Troubleshooting
 
 _The Extension I have specified is not appearing the Developer Rig._
@@ -268,7 +271,10 @@ _I see an error when attempting to run 'yarn test'._
 
 > Sometimes deleting and reinstalling your `node_modules` can correct this issue. On MacOS, you may need to explicitly install watchman via `brew install watchman`.
 
-
 _`yarn install` fails in libssh2_
 
 > See issue [#48](https://github.com/twitchdev/developer-rig/issues/48). Be sure libssh, and it's dependencies are installed.
+
+_I get an error when pulling in the sample project!
+
+> Ensure that Git is in your PATH variables by attempting to run "git" at your commmandline. If that works, also ensure that the local folder does not currently exist. 

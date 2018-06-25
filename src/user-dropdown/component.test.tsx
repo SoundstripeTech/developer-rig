@@ -1,12 +1,11 @@
-import { setupShallowTestWithStore, setupShallowTest } from '../tests/enzyme-util/shallow';
-import { UserDropdown } from './component';
-import { EXTENSION_VIEWS, BROADCASTER_CONFIG, LIVE_CONFIG, CONFIGURATIONS  } from '../constants/nav-items';
+import { setupShallowTest } from '../tests/enzyme-util/shallow';
+import { UserDropdownComponent } from './component';
 
-describe('<UserDropdown />', () => {
+describe('<UserDropdownComponent />', () => {
   const defaultGenerator = () => ({
     session: { login: 'test', profileImageUrl: 'test.png', authToken: 'test' },
   });
-  const setupRenderer = setupShallowTest(UserDropdown, defaultGenerator);
+  const setupRenderer = setupShallowTest(UserDropdownComponent, defaultGenerator);
 
   it('renders correctly', () => {
     const { wrapper } = setupRenderer();
@@ -18,5 +17,14 @@ describe('<UserDropdown />', () => {
       session: null,
     });
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('remders correctly when clicked', () => {
+    const { wrapper } = setupRenderer();
+    wrapper.simulate('click');
+    expect(wrapper.find('.user-dropdown__menu.open')).toHaveLength(1);
+
+    wrapper.simulate('click');
+    expect(wrapper.find('.open')).toHaveLength(0);
   });
 });

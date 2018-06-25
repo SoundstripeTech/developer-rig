@@ -1,4 +1,5 @@
-const git = require("nodegit");
+const {execFile} = require('child_process');
+const path = require('path');
 
 const optionDefinitions = [
   { name: "account", alias: "a", type: String, defaultValue: "twitchdev"},
@@ -22,14 +23,13 @@ if (require.main === module) {
   const extensionRepo = "https://github.com/" + args["account"] + "/" + args["repo"] + ".git"
 
   let error;
-  git.Clone(extensionRepo, args["local_dir"])
-    .catch(function (err) { error = err; })
-    .done(function(repo) {
-      if (error !== undefined) {
-        console.log("ERROR: You may need to remove the local directory specified before re running.");
-        console.log(error);
-      } else {
-        console.log("Finished cloning " + extensionRepo + "@master into local directory "+ args["local_dir"])
-      }
-    })
+
+  execFile("git",["clone", extensionRepo, path.resolve(args["local_dir"])],(err,stdout,stderr)=>{
+    if(err){
+      console.log("ERROR: You may need to remove the local directory specified before re running.");
+      console.log(err);    
+    }else{
+      console.log("Finished cloning " + extensionRepo + "@master into local directory "+ args["local_dir"])
+    }
+  })
 }

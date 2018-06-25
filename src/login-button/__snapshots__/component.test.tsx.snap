@@ -17,14 +17,12 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <a
-        href="https://id.twitch.tv/oauth2/authorize?client_id=2dhk7ewe0el4fyu2y8af42v3i0znx5&redirect_uri=https://localhost.rig.twitch.tv:3000&response_type=token&scope=user:edit+extensions:edit:catalog"
+      "children": <button
+        className="login-button"
 >
-        <button>
-                Log In
-        </button>
-</a>,
-      "className": "login-button",
+        Log In
+</button>,
+      "href": "https://id.twitch.tv/oauth2/authorize?client_id=rtwj27xsv591q1zcnqqfg7suduj4pq&redirect_uri=https://localhost.rig.twitch.tv:3000&response_type=token&scope=user:edit",
     },
     "ref": null,
     "rendered": Object {
@@ -32,10 +30,27 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <button>
+        "children": "Log In",
+        "className": "login-button",
+      },
+      "ref": null,
+      "rendered": "Log In",
+      "type": "button",
+    },
+    "type": "a",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <button
+          className="login-button"
+>
           Log In
 </button>,
-        "href": "https://id.twitch.tv/oauth2/authorize?client_id=2dhk7ewe0el4fyu2y8af42v3i0znx5&redirect_uri=https://localhost.rig.twitch.tv:3000&response_type=token&scope=user:edit+extensions:edit:catalog",
+        "href": "https://id.twitch.tv/oauth2/authorize?client_id=rtwj27xsv591q1zcnqqfg7suduj4pq&redirect_uri=https://localhost.rig.twitch.tv:3000&response_type=token&scope=user:edit",
       },
       "ref": null,
       "rendered": Object {
@@ -44,56 +59,13 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Log In",
+          "className": "login-button",
         },
         "ref": null,
         "rendered": "Log In",
         "type": "button",
       },
       "type": "a",
-    },
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": <a
-          href="https://id.twitch.tv/oauth2/authorize?client_id=2dhk7ewe0el4fyu2y8af42v3i0znx5&redirect_uri=https://localhost.rig.twitch.tv:3000&response_type=token&scope=user:edit+extensions:edit:catalog"
->
-          <button>
-                    Log In
-          </button>
-</a>,
-        "className": "login-button",
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": <button>
-            Log In
-</button>,
-          "href": "https://id.twitch.tv/oauth2/authorize?client_id=2dhk7ewe0el4fyu2y8af42v3i0znx5&redirect_uri=https://localhost.rig.twitch.tv:3000&response_type=token&scope=user:edit+extensions:edit:catalog",
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Log In",
-          },
-          "ref": null,
-          "rendered": "Log In",
-          "type": "button",
-        },
-        "type": "a",
-      },
-      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
