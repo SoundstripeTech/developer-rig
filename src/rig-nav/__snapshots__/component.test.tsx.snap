@@ -9,7 +9,6 @@ ShallowWrapper {
     error=""
     liveConfigHandler={[Function]}
     openConfigurationsHandler={[Function]}
-    openProductManagementHandler={[Function]}
     selectedView="Extension Views"
     viewerHandler={[Function]}
 />,
@@ -26,32 +25,43 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <a
-          className="top-nav-item top-nav-item__selected"
-          onClick={[Function]}
+        <div
+          className="personal-bar"
 >
-          Extension Views
-</a>,
-        <a
-          className="top-nav-item"
-          onClick={[Function]}
+          <div
+                    className="top-nav-item__login"
+          >
+                    <LoginButton />
+          </div>
+</div>,
+        <div
+          className="top-nab__item-container"
 >
-          Broadcaster Config
-</a>,
-        <a
-          className="top-nav-item"
-          onClick={[Function]}
->
-          Live Config
-</a>,
-        <a
-          className="top-nav-item"
-          onClick={[Function]}
->
-          Configurations
-</a>,
-        undefined,
-        <LoginButton />,
+          <a
+                    className="top-nav-item top-nav-item__selected offset"
+                    onClick={[Function]}
+          >
+                    Extension Views
+          </a>
+          <a
+                    className="top-nav-item"
+                    onClick={[Function]}
+          >
+                    Broadcaster Config
+          </a>
+          <a
+                    className="top-nav-item"
+                    onClick={[Function]}
+          >
+                    Live Config
+          </a>
+          <a
+                    className="top-nav-item"
+                    onClick={[Function]}
+          >
+                    Configurations
+          </a>
+</div>,
       ],
       "className": "top-nav",
     },
@@ -62,62 +72,133 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Extension Views",
-          "className": "top-nav-item top-nav-item__selected",
-          "onClick": [Function],
+          "children": Array [
+            undefined,
+            <div
+              className="top-nav-item__login"
+>
+              <LoginButton />
+</div>,
+          ],
+          "className": "personal-bar",
         },
         "ref": null,
-        "rendered": "Extension Views",
-        "type": "a",
+        "rendered": Array [
+          undefined,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <LoginButton />,
+              "className": "top-nav-item__login",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Broadcaster Config",
-          "className": "top-nav-item",
-          "onClick": [Function],
+          "children": Array [
+            <a
+              className="top-nav-item top-nav-item__selected offset"
+              onClick={[Function]}
+>
+              Extension Views
+</a>,
+            <a
+              className="top-nav-item"
+              onClick={[Function]}
+>
+              Broadcaster Config
+</a>,
+            <a
+              className="top-nav-item"
+              onClick={[Function]}
+>
+              Live Config
+</a>,
+            <a
+              className="top-nav-item"
+              onClick={[Function]}
+>
+              Configurations
+</a>,
+            undefined,
+          ],
+          "className": "top-nab__item-container",
         },
         "ref": null,
-        "rendered": "Broadcaster Config",
-        "type": "a",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Live Config",
-          "className": "top-nav-item",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Live Config",
-        "type": "a",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Configurations",
-          "className": "top-nav-item",
-          "onClick": [Function],
-        },
-        "ref": null,
-        "rendered": "Configurations",
-        "type": "a",
-      },
-      undefined,
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Extension Views",
+              "className": "top-nav-item top-nav-item__selected offset",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Extension Views",
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Broadcaster Config",
+              "className": "top-nav-item",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Broadcaster Config",
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Live Config",
+              "className": "top-nav-item",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Live Config",
+            "type": "a",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Configurations",
+              "className": "top-nav-item",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Configurations",
+            "type": "a",
+          },
+          undefined,
+        ],
+        "type": "div",
       },
     ],
     "type": "div",
@@ -129,32 +210,43 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <a
-            className="top-nav-item top-nav-item__selected"
-            onClick={[Function]}
+          <div
+            className="personal-bar"
 >
-            Extension Views
-</a>,
-          <a
-            className="top-nav-item"
-            onClick={[Function]}
+            <div
+                        className="top-nav-item__login"
+            >
+                        <LoginButton />
+            </div>
+</div>,
+          <div
+            className="top-nab__item-container"
 >
-            Broadcaster Config
-</a>,
-          <a
-            className="top-nav-item"
-            onClick={[Function]}
->
-            Live Config
-</a>,
-          <a
-            className="top-nav-item"
-            onClick={[Function]}
->
-            Configurations
-</a>,
-          undefined,
-          <LoginButton />,
+            <a
+                        className="top-nav-item top-nav-item__selected offset"
+                        onClick={[Function]}
+            >
+                        Extension Views
+            </a>
+            <a
+                        className="top-nav-item"
+                        onClick={[Function]}
+            >
+                        Broadcaster Config
+            </a>
+            <a
+                        className="top-nav-item"
+                        onClick={[Function]}
+            >
+                        Live Config
+            </a>
+            <a
+                        className="top-nav-item"
+                        onClick={[Function]}
+            >
+                        Configurations
+            </a>
+</div>,
         ],
         "className": "top-nav",
       },
@@ -165,62 +257,133 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Extension Views",
-            "className": "top-nav-item top-nav-item__selected",
-            "onClick": [Function],
+            "children": Array [
+              undefined,
+              <div
+                className="top-nav-item__login"
+>
+                <LoginButton />
+</div>,
+            ],
+            "className": "personal-bar",
           },
           "ref": null,
-          "rendered": "Extension Views",
-          "type": "a",
+          "rendered": Array [
+            undefined,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <LoginButton />,
+                "className": "top-nav-item__login",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Broadcaster Config",
-            "className": "top-nav-item",
-            "onClick": [Function],
+            "children": Array [
+              <a
+                className="top-nav-item top-nav-item__selected offset"
+                onClick={[Function]}
+>
+                Extension Views
+</a>,
+              <a
+                className="top-nav-item"
+                onClick={[Function]}
+>
+                Broadcaster Config
+</a>,
+              <a
+                className="top-nav-item"
+                onClick={[Function]}
+>
+                Live Config
+</a>,
+              <a
+                className="top-nav-item"
+                onClick={[Function]}
+>
+                Configurations
+</a>,
+              undefined,
+            ],
+            "className": "top-nab__item-container",
           },
           "ref": null,
-          "rendered": "Broadcaster Config",
-          "type": "a",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Live Config",
-            "className": "top-nav-item",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "Live Config",
-          "type": "a",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Configurations",
-            "className": "top-nav-item",
-            "onClick": [Function],
-          },
-          "ref": null,
-          "rendered": "Configurations",
-          "type": "a",
-        },
-        undefined,
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Extension Views",
+                "className": "top-nav-item top-nav-item__selected offset",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Extension Views",
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Broadcaster Config",
+                "className": "top-nav-item",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Broadcaster Config",
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Live Config",
+                "className": "top-nav-item",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Live Config",
+              "type": "a",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Configurations",
+                "className": "top-nav-item",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Configurations",
+              "type": "a",
+            },
+            undefined,
+          ],
+          "type": "div",
         },
       ],
       "type": "div",

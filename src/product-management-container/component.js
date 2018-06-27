@@ -8,7 +8,7 @@ export class ProductManagementViewContainer extends Component {
     return (
       <div className='product-container-wrapper'>
         <div className='product-container'>
-          <ProductTable clientId={this.props.clientId} token={this.props.token} />
+          <ProductTable clientId={this.props.clientId} />
         </div>
       </div>
     );
@@ -17,5 +17,4 @@ export class ProductManagementViewContainer extends Component {
 
 ProductManagementViewContainer.propTypes = {
   clientId: PropTypes.string.isRequired,
-  token: PropTypes.string.isRequired
 }

@@ -13,7 +13,6 @@ export interface PublicProps {
   loginHandler: Function,
   configHandler: Function,
   liveConfigHandler: Function,
-  bitsEnabled: boolean,
   selectedView: string,
   error: string,
 }
@@ -61,7 +60,7 @@ export class RigNavComponent extends React.Component<Props> {
             <a
               className={this.props.selectedView === CONFIGURATIONS ? 'top-nav-item top-nav-item__selected' : 'top-nav-item'}
               onClick={(event) => this.openConfigurationsHandler()}>Configurations</a>
-            {(session && session.login) && this.props.bitsEnabled && 
+            {(session && session.login) && (manifest && manifest.bits_enabled) && 
               <a
                 className={this.props.selectedView === PRODUCT_MANAGEMENT ? "top-nav-item top-nav-item__selected" : "top-nav-item"}
                 onClick={(event) => this.props.openProductManagementHandler()}>Manage Products</a>

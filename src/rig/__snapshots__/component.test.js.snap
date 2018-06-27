@@ -19,7 +19,6 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Connect(RigNavComponent)
-          bitsEnabled={undefined}
           configHandler={[Function]}
           error=""
           liveConfigHandler={[Function]}
@@ -55,7 +54,6 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "bitsEnabled": undefined,
           "configHandler": [Function],
           "error": "",
           "liveConfigHandler": [Function],
@@ -150,7 +148,6 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Connect(RigNavComponent)
-            bitsEnabled={undefined}
             configHandler={[Function]}
             error=""
             liveConfigHandler={[Function]}
@@ -186,7 +183,6 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "bitsEnabled": undefined,
             "configHandler": [Function],
             "error": "",
             "liveConfigHandler": [Function],
@@ -303,7 +299,6 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Connect(RigNavComponent)
-          bitsEnabled={undefined}
           configHandler={[Function]}
           error=""
           liveConfigHandler={[Function]}
@@ -389,7 +384,6 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "bitsEnabled": undefined,
           "configHandler": [Function],
           "error": "",
           "liveConfigHandler": [Function],
@@ -582,7 +576,6 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Connect(RigNavComponent)
-            bitsEnabled={undefined}
             configHandler={[Function]}
             error=""
             liveConfigHandler={[Function]}
@@ -668,7 +661,6 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "bitsEnabled": undefined,
             "configHandler": [Function],
             "error": "",
             "liveConfigHandler": [Function],

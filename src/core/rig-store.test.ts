@@ -1,13 +1,18 @@
 import { RigStore } from './rig-store';
+import { GlobalState } from './models/global-state';
 
 describe('RigStore', () => {
   it('initializes the correct reducers', () => {
     const store = new RigStore();
-    const expectedState = {
+    const expectedState: GlobalState = {
       session: {},
       extensions: {},
+      products: {
+        products: [],
+        error: '',
+      },
     }
     const state = store.getState();
-    expect(state).toEqual(expectedState);[]
+    expect(state).toEqual(expectedState);
   });
 });

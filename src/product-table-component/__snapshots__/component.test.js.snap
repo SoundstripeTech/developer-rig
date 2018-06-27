@@ -7,12 +7,17 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <Unknown
     product={
         Object {
-            "amount": "1",
+            "amount": 100,
             "broadcast": "false",
-            "displayName": "Test 1",
-            "inDevelopment": "true",
-            "sku": "test1",
-            "validationErrors": Object {},
+            "deprecated": false,
+            "dirty": false,
+            "displayName": "Test Product 1",
+            "inDevelopment": "false",
+            "savedInCatalog": true,
+            "sku": "testSku1",
+            "validationErrors": Object {
+              "sku": "SKU must be unique",
+            },
           }
     }
 />,
@@ -39,22 +44,30 @@ ShallowWrapper {
                     onChange={undefined}
                     required={true}
                     type="text"
-                    value="Test 1"
+                    value="Test Product 1"
+          />
+          <p
+                    className="invalid-hint"
           />
 </div>,
         <div
           className="text-col"
 >
           <input
-                    className="form__input"
-                    disabled={undefined}
+                    className="form__input invalid"
+                    disabled={true}
                     maxLength="255"
                     name="sku"
                     onChange={undefined}
                     required={true}
                     type="text"
-                    value="test1"
+                    value="testSku1"
           />
+          <p
+                    className="invalid-hint"
+          >
+                    SKU must be unique
+          </p>
 </div>,
         <div
           className="text-col"
@@ -67,7 +80,10 @@ ShallowWrapper {
                     onChange={undefined}
                     required={true}
                     type="number"
-                    value="1"
+                    value={100}
+          />
+          <p
+                    className="invalid-hint"
           />
 </div>,
         <div
@@ -77,7 +93,7 @@ ShallowWrapper {
                     className="form__input"
                     name="inDevelopment"
                     onChange={undefined}
-                    value="true"
+                    value="false"
           >
                     <option
                               value="true"
@@ -90,6 +106,9 @@ ShallowWrapper {
                               No
                     </option>
           </select>
+          <p
+                    className="invalid-hint"
+          />
 </div>,
         <div
           className="select-col"
@@ -111,6 +130,9 @@ ShallowWrapper {
                               No
                     </option>
           </select>
+          <p
+                    className="invalid-hint"
+          />
 </div>,
         <div
           className="button-col"
@@ -121,6 +143,9 @@ ShallowWrapper {
           >
                     Deprecate
           </button>
+          <p
+                    className="invalid-hint"
+          />
 </div>,
         <div
           className="dirty-col"
@@ -140,6 +165,9 @@ ShallowWrapper {
                               />
                     </svg>
           </div>
+          <p
+                    className="invalid-hint"
+          />
 </div>,
       ],
       "className": "product-table__row",
@@ -159,9 +187,11 @@ ShallowWrapper {
               onChange={undefined}
               required={true}
               type="text"
-              value="Test 1"
+              value="Test Product 1"
 />,
-            false,
+            <p
+              className="invalid-hint"
+/>,
           ],
           "className": "text-col",
         },
@@ -178,13 +208,24 @@ ShallowWrapper {
               "onChange": undefined,
               "required": true,
               "type": "text",
-              "value": "Test 1",
+              "value": "Test Product 1",
             },
             "ref": null,
             "rendered": null,
             "type": "input",
           },
-          false,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "invalid-hint",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
+          },
         ],
         "type": "div",
       },
@@ -195,16 +236,20 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <input
-              className="form__input"
-              disabled={undefined}
+              className="form__input invalid"
+              disabled={true}
               maxLength="255"
               name="sku"
               onChange={undefined}
               required={true}
               type="text"
-              value="test1"
+              value="testSku1"
 />,
-            false,
+            <p
+              className="invalid-hint"
+>
+              SKU must be unique
+</p>,
           ],
           "className": "text-col",
         },
@@ -215,20 +260,31 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "className": "form__input",
-              "disabled": undefined,
+              "className": "form__input invalid",
+              "disabled": true,
               "maxLength": "255",
               "name": "sku",
               "onChange": undefined,
               "required": true,
               "type": "text",
-              "value": "test1",
+              "value": "testSku1",
             },
             "ref": null,
             "rendered": null,
             "type": "input",
           },
-          false,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "SKU must be unique",
+              "className": "invalid-hint",
+            },
+            "ref": null,
+            "rendered": "SKU must be unique",
+            "type": "p",
+          },
         ],
         "type": "div",
       },
@@ -246,9 +302,11 @@ ShallowWrapper {
               onChange={undefined}
               required={true}
               type="number"
-              value="1"
+              value={100}
 />,
-            false,
+            <p
+              className="invalid-hint"
+/>,
           ],
           "className": "text-col",
         },
@@ -266,13 +324,24 @@ ShallowWrapper {
               "onChange": undefined,
               "required": true,
               "type": "number",
-              "value": "1",
+              "value": 100,
             },
             "ref": null,
             "rendered": null,
             "type": "input",
           },
-          false,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "invalid-hint",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
+          },
         ],
         "type": "div",
       },
@@ -286,7 +355,7 @@ ShallowWrapper {
               className="form__input"
               name="inDevelopment"
               onChange={undefined}
-              value="true"
+              value="false"
 >
               <option
                             value="true"
@@ -299,7 +368,9 @@ ShallowWrapper {
                             No
               </option>
 </select>,
-            false,
+            <p
+              className="invalid-hint"
+/>,
           ],
           "className": "select-col",
         },
@@ -325,7 +396,7 @@ ShallowWrapper {
               "className": "form__input",
               "name": "inDevelopment",
               "onChange": undefined,
-              "value": "true",
+              "value": "false",
             },
             "ref": null,
             "rendered": Array [
@@ -356,7 +427,18 @@ ShallowWrapper {
             ],
             "type": "select",
           },
-          false,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "invalid-hint",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
+          },
         ],
         "type": "div",
       },
@@ -383,7 +465,9 @@ ShallowWrapper {
                             No
               </option>
 </select>,
-            false,
+            <p
+              className="invalid-hint"
+/>,
           ],
           "className": "select-col",
         },
@@ -440,7 +524,18 @@ ShallowWrapper {
             ],
             "type": "select",
           },
-          false,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "invalid-hint",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
+          },
         ],
         "type": "div",
       },
@@ -456,7 +551,9 @@ ShallowWrapper {
 >
               Deprecate
 </button>,
-            false,
+            <p
+              className="invalid-hint"
+/>,
           ],
           "className": "button-col",
         },
@@ -475,7 +572,17 @@ ShallowWrapper {
             "rendered": "Deprecate",
             "type": "button",
           },
-          false,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "invalid-hint",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
+          },
         ],
         "type": "div",
       },
@@ -500,7 +607,9 @@ ShallowWrapper {
                             />
               </svg>
 </div>,
-            false,
+            <p
+              className="invalid-hint"
+/>,
           ],
           "className": "dirty-col",
         },
@@ -557,7 +666,17 @@ ShallowWrapper {
             },
             "type": "div",
           },
-          false,
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "invalid-hint",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "p",
+          },
         ],
         "type": "div",
       },
@@ -581,22 +700,30 @@ ShallowWrapper {
                         onChange={undefined}
                         required={true}
                         type="text"
-                        value="Test 1"
+                        value="Test Product 1"
+            />
+            <p
+                        className="invalid-hint"
             />
 </div>,
           <div
             className="text-col"
 >
             <input
-                        className="form__input"
-                        disabled={undefined}
+                        className="form__input invalid"
+                        disabled={true}
                         maxLength="255"
                         name="sku"
                         onChange={undefined}
                         required={true}
                         type="text"
-                        value="test1"
+                        value="testSku1"
             />
+            <p
+                        className="invalid-hint"
+            >
+                        SKU must be unique
+            </p>
 </div>,
           <div
             className="text-col"
@@ -609,7 +736,10 @@ ShallowWrapper {
                         onChange={undefined}
                         required={true}
                         type="number"
-                        value="1"
+                        value={100}
+            />
+            <p
+                        className="invalid-hint"
             />
 </div>,
           <div
@@ -619,7 +749,7 @@ ShallowWrapper {
                         className="form__input"
                         name="inDevelopment"
                         onChange={undefined}
-                        value="true"
+                        value="false"
             >
                         <option
                                     value="true"
@@ -632,6 +762,9 @@ ShallowWrapper {
                                     No
                         </option>
             </select>
+            <p
+                        className="invalid-hint"
+            />
 </div>,
           <div
             className="select-col"
@@ -653,6 +786,9 @@ ShallowWrapper {
                                     No
                         </option>
             </select>
+            <p
+                        className="invalid-hint"
+            />
 </div>,
           <div
             className="button-col"
@@ -663,6 +799,9 @@ ShallowWrapper {
             >
                         Deprecate
             </button>
+            <p
+                        className="invalid-hint"
+            />
 </div>,
           <div
             className="dirty-col"
@@ -682,6 +821,9 @@ ShallowWrapper {
                                     />
                         </svg>
             </div>
+            <p
+                        className="invalid-hint"
+            />
 </div>,
         ],
         "className": "product-table__row",
@@ -701,9 +843,11 @@ ShallowWrapper {
                 onChange={undefined}
                 required={true}
                 type="text"
-                value="Test 1"
+                value="Test Product 1"
 />,
-              false,
+              <p
+                className="invalid-hint"
+/>,
             ],
             "className": "text-col",
           },
@@ -720,13 +864,24 @@ ShallowWrapper {
                 "onChange": undefined,
                 "required": true,
                 "type": "text",
-                "value": "Test 1",
+                "value": "Test Product 1",
               },
               "ref": null,
               "rendered": null,
               "type": "input",
             },
-            false,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "invalid-hint",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
           ],
           "type": "div",
         },
@@ -737,16 +892,20 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <input
-                className="form__input"
-                disabled={undefined}
+                className="form__input invalid"
+                disabled={true}
                 maxLength="255"
                 name="sku"
                 onChange={undefined}
                 required={true}
                 type="text"
-                value="test1"
+                value="testSku1"
 />,
-              false,
+              <p
+                className="invalid-hint"
+>
+                SKU must be unique
+</p>,
             ],
             "className": "text-col",
           },
@@ -757,20 +916,31 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "className": "form__input",
-                "disabled": undefined,
+                "className": "form__input invalid",
+                "disabled": true,
                 "maxLength": "255",
                 "name": "sku",
                 "onChange": undefined,
                 "required": true,
                 "type": "text",
-                "value": "test1",
+                "value": "testSku1",
               },
               "ref": null,
               "rendered": null,
               "type": "input",
             },
-            false,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "SKU must be unique",
+                "className": "invalid-hint",
+              },
+              "ref": null,
+              "rendered": "SKU must be unique",
+              "type": "p",
+            },
           ],
           "type": "div",
         },
@@ -788,9 +958,11 @@ ShallowWrapper {
                 onChange={undefined}
                 required={true}
                 type="number"
-                value="1"
+                value={100}
 />,
-              false,
+              <p
+                className="invalid-hint"
+/>,
             ],
             "className": "text-col",
           },
@@ -808,13 +980,24 @@ ShallowWrapper {
                 "onChange": undefined,
                 "required": true,
                 "type": "number",
-                "value": "1",
+                "value": 100,
               },
               "ref": null,
               "rendered": null,
               "type": "input",
             },
-            false,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "invalid-hint",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
           ],
           "type": "div",
         },
@@ -828,7 +1011,7 @@ ShallowWrapper {
                 className="form__input"
                 name="inDevelopment"
                 onChange={undefined}
-                value="true"
+                value="false"
 >
                 <option
                                 value="true"
@@ -841,7 +1024,9 @@ ShallowWrapper {
                                 No
                 </option>
 </select>,
-              false,
+              <p
+                className="invalid-hint"
+/>,
             ],
             "className": "select-col",
           },
@@ -867,7 +1052,7 @@ ShallowWrapper {
                 "className": "form__input",
                 "name": "inDevelopment",
                 "onChange": undefined,
-                "value": "true",
+                "value": "false",
               },
               "ref": null,
               "rendered": Array [
@@ -898,7 +1083,18 @@ ShallowWrapper {
               ],
               "type": "select",
             },
-            false,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "invalid-hint",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
           ],
           "type": "div",
         },
@@ -925,7 +1121,9 @@ ShallowWrapper {
                                 No
                 </option>
 </select>,
-              false,
+              <p
+                className="invalid-hint"
+/>,
             ],
             "className": "select-col",
           },
@@ -982,7 +1180,18 @@ ShallowWrapper {
               ],
               "type": "select",
             },
-            false,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "invalid-hint",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
           ],
           "type": "div",
         },
@@ -998,7 +1207,9 @@ ShallowWrapper {
 >
                 Deprecate
 </button>,
-              false,
+              <p
+                className="invalid-hint"
+/>,
             ],
             "className": "button-col",
           },
@@ -1017,7 +1228,17 @@ ShallowWrapper {
               "rendered": "Deprecate",
               "type": "button",
             },
-            false,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "invalid-hint",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
           ],
           "type": "div",
         },
@@ -1042,7 +1263,9 @@ ShallowWrapper {
                                 />
                 </svg>
 </div>,
-              false,
+              <p
+                className="invalid-hint"
+/>,
             ],
             "className": "dirty-col",
           },
@@ -1099,7 +1322,17 @@ ShallowWrapper {
               },
               "type": "div",
             },
-            false,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "invalid-hint",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "p",
+            },
           ],
           "type": "div",
         },
@@ -1122,7 +1355,40 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ProductTableComponent
+    addProduct={[Function]}
+    changeProductValue={[Function]}
     clientId="client-id"
+    error=""
+    loadProductsFailure={[Function]}
+    loadProductsSuccess={[Function]}
+    products={
+        Array [
+            Object {
+              "amount": 100,
+              "broadcast": "false",
+              "deprecated": false,
+              "dirty": false,
+              "displayName": "Test Product 1",
+              "inDevelopment": "false",
+              "savedInCatalog": true,
+              "sku": "testSku1",
+              "validationErrors": Object {},
+            },
+            Object {
+              "amount": 500,
+              "broadcast": "false",
+              "deprecated": false,
+              "dirty": false,
+              "displayName": "Test Product 2",
+              "inDevelopment": "true",
+              "savedInCatalog": true,
+              "sku": "testSku2",
+              "validationErrors": Object {},
+            },
+          ]
+    }
+    saveProductsFailure={[Function]}
+    saveProductsSuccess={[Function]}
     token="token"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -1185,13 +1451,31 @@ ShallowWrapper {
                     handleValueChange={[Function]}
                     product={
                               Object {
-                                        "amount": "1",
-                                        "broadcast": "true",
+                                        "amount": 100,
+                                        "broadcast": "false",
                                         "deprecated": false,
-                                        "dirty": true,
-                                        "displayName": "New Product",
+                                        "dirty": false,
+                                        "displayName": "Test Product 1",
+                                        "inDevelopment": "false",
+                                        "savedInCatalog": true,
+                                        "sku": "testSku1",
+                                        "validationErrors": Object {},
+                                      }
+                    }
+          />
+          <Unknown
+                    handleDeprecateClick={[Function]}
+                    handleValueChange={[Function]}
+                    product={
+                              Object {
+                                        "amount": 500,
+                                        "broadcast": "false",
+                                        "deprecated": false,
+                                        "dirty": false,
+                                        "displayName": "Test Product 2",
                                         "inDevelopment": "true",
-                                        "sku": "sku1",
+                                        "savedInCatalog": true,
+                                        "sku": "testSku2",
                                         "validationErrors": Object {},
                                       }
                     }
@@ -1274,13 +1558,31 @@ ShallowWrapper {
                 handleValueChange={[Function]}
                 product={
                                 Object {
-                                                "amount": "1",
-                                                "broadcast": "true",
+                                                "amount": 100,
+                                                "broadcast": "false",
                                                 "deprecated": false,
-                                                "dirty": true,
-                                                "displayName": "New Product",
+                                                "dirty": false,
+                                                "displayName": "Test Product 1",
+                                                "inDevelopment": "false",
+                                                "savedInCatalog": true,
+                                                "sku": "testSku1",
+                                                "validationErrors": Object {},
+                                              }
+                }
+/>,
+              <Unknown
+                handleDeprecateClick={[Function]}
+                handleValueChange={[Function]}
+                product={
+                                Object {
+                                                "amount": 500,
+                                                "broadcast": "false",
+                                                "deprecated": false,
+                                                "dirty": false,
+                                                "displayName": "Test Product 2",
                                                 "inDevelopment": "true",
-                                                "sku": "sku1",
+                                                "savedInCatalog": true,
+                                                "sku": "testSku2",
                                                 "validationErrors": Object {},
                                               }
                 }
@@ -1437,13 +1739,37 @@ ShallowWrapper {
               "handleDeprecateClick": [Function],
               "handleValueChange": [Function],
               "product": Object {
-                "amount": "1",
-                "broadcast": "true",
+                "amount": 100,
+                "broadcast": "false",
                 "deprecated": false,
-                "dirty": true,
-                "displayName": "New Product",
+                "dirty": false,
+                "displayName": "Test Product 1",
+                "inDevelopment": "false",
+                "savedInCatalog": true,
+                "sku": "testSku1",
+                "validationErrors": Object {},
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "function",
+            "props": Object {
+              "handleDeprecateClick": [Function],
+              "handleValueChange": [Function],
+              "product": Object {
+                "amount": 500,
+                "broadcast": "false",
+                "deprecated": false,
+                "dirty": false,
+                "displayName": "Test Product 2",
                 "inDevelopment": "true",
-                "sku": "sku1",
+                "savedInCatalog": true,
+                "sku": "testSku2",
                 "validationErrors": Object {},
               },
             },
@@ -1568,13 +1894,31 @@ ShallowWrapper {
                         handleValueChange={[Function]}
                         product={
                                     Object {
-                                                "amount": "1",
-                                                "broadcast": "true",
+                                                "amount": 100,
+                                                "broadcast": "false",
                                                 "deprecated": false,
-                                                "dirty": true,
-                                                "displayName": "New Product",
+                                                "dirty": false,
+                                                "displayName": "Test Product 1",
+                                                "inDevelopment": "false",
+                                                "savedInCatalog": true,
+                                                "sku": "testSku1",
+                                                "validationErrors": Object {},
+                                              }
+                        }
+            />
+            <Unknown
+                        handleDeprecateClick={[Function]}
+                        handleValueChange={[Function]}
+                        product={
+                                    Object {
+                                                "amount": 500,
+                                                "broadcast": "false",
+                                                "deprecated": false,
+                                                "dirty": false,
+                                                "displayName": "Test Product 2",
                                                 "inDevelopment": "true",
-                                                "sku": "sku1",
+                                                "savedInCatalog": true,
+                                                "sku": "testSku2",
                                                 "validationErrors": Object {},
                                               }
                         }
@@ -1657,13 +2001,31 @@ ShallowWrapper {
                   handleValueChange={[Function]}
                   product={
                                     Object {
-                                                      "amount": "1",
-                                                      "broadcast": "true",
+                                                      "amount": 100,
+                                                      "broadcast": "false",
                                                       "deprecated": false,
-                                                      "dirty": true,
-                                                      "displayName": "New Product",
+                                                      "dirty": false,
+                                                      "displayName": "Test Product 1",
+                                                      "inDevelopment": "false",
+                                                      "savedInCatalog": true,
+                                                      "sku": "testSku1",
+                                                      "validationErrors": Object {},
+                                                    }
+                  }
+/>,
+                <Unknown
+                  handleDeprecateClick={[Function]}
+                  handleValueChange={[Function]}
+                  product={
+                                    Object {
+                                                      "amount": 500,
+                                                      "broadcast": "false",
+                                                      "deprecated": false,
+                                                      "dirty": false,
+                                                      "displayName": "Test Product 2",
                                                       "inDevelopment": "true",
-                                                      "sku": "sku1",
+                                                      "savedInCatalog": true,
+                                                      "sku": "testSku2",
                                                       "validationErrors": Object {},
                                                     }
                   }
@@ -1820,13 +2182,37 @@ ShallowWrapper {
                 "handleDeprecateClick": [Function],
                 "handleValueChange": [Function],
                 "product": Object {
-                  "amount": "1",
-                  "broadcast": "true",
+                  "amount": 100,
+                  "broadcast": "false",
                   "deprecated": false,
-                  "dirty": true,
-                  "displayName": "New Product",
+                  "dirty": false,
+                  "displayName": "Test Product 1",
+                  "inDevelopment": "false",
+                  "savedInCatalog": true,
+                  "sku": "testSku1",
+                  "validationErrors": Object {},
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "function",
+              "props": Object {
+                "handleDeprecateClick": [Function],
+                "handleValueChange": [Function],
+                "product": Object {
+                  "amount": 500,
+                  "broadcast": "false",
+                  "deprecated": false,
+                  "dirty": false,
+                  "displayName": "Test Product 2",
                   "inDevelopment": "true",
-                  "sku": "sku1",
+                  "savedInCatalog": true,
+                  "sku": "testSku2",
                   "validationErrors": Object {},
                 },
               },

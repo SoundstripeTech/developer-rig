@@ -169,7 +169,6 @@ export function fetchProducts(host, clientId, token, onSuccess, onError) {
           inDevelopment: p.inDevelopment ? 'true' : 'false',
           broadcast: p.broadcast ? 'true' : 'false',
           deprecated: p.expiration ? Date.parse(p.expiration) <= Date.now() : false,
-          savedInCatalog: true,
         };
 
         return product;
@@ -180,7 +179,7 @@ export function fetchProducts(host, clientId, token, onSuccess, onError) {
     });
 }
 
-export function saveProduct(host, clientId, token, product, onSuccess, onError) {
+export function saveProduct(host, clientId, token, product, index, onSuccess, onError) {
   const api = 'https://' + host + '/v5/bits/extensions/twitch.ext.' + clientId + '/products/put';
   const deserializedProduct = {
     domain: 'twitch.ext.' + clientId,
@@ -207,8 +206,8 @@ export function saveProduct(host, clientId, token, product, onSuccess, onError) 
     referrer: 'Twitch Developer Rig',
   }).then(response => response.json())
     .then(respJson => {
-      onSuccess(respJson);
+      onSuccess(index);
     }).catch(error => {
-      onError(error);
+      onError(index, error);
     });
 }
