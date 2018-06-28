@@ -1,5 +1,5 @@
 .product-table
-  margin-top: 3rem
+  padding: 2rem 1rem
   overflow-x: hidden
 
   .text-col
@@ -40,7 +40,7 @@
   margin-bottom: 0.8rem
   font-family: HelveticaNeue-Medium, Helvetica, Arial, "Lucida Grande", sans-serif
 
-  div
+  & > div
     padding-left: 0.1rem
 
 .product-table__category
@@ -155,3 +155,47 @@ button
     background: rgba(100, 65, 164, 0.05)
     color: #2c2541
 
+.balloon-wrapper
+  position: relative
+
+.balloon-wrapper:hover .balloon
+  display: block
+
+.balloon
+  border-radius: 1px
+  background: #392e5c
+  color: white
+  display: none
+  position: absolute
+  top: 100%
+  left: 0
+  min-width: 5rem
+  max-width: 120vw
+  margin-top: 6px
+  padding: 0.5rem
+  font-size: 0.8rem
+  line-height: 1.2rem
+  text-align: left
+  z-index: 99999
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+
+.balloon::before, .balloon::after
+  position: absolute
+  content: ''
+
+.balloon::before
+  top: -6px
+  left: -6px
+  width: calc(100% + 12px)
+  height: calc(100% + 12px)
+  z-index: -1
+
+.balloon::after
+  background: #392e5c
+  width: 6px
+  height: 6px
+  transform: rotate(45deg)
+  z-index: -1
+  border-radius: 1px 0 0
+  top: -3px
+  left: 6px

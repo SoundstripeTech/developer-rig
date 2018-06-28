@@ -4,7 +4,7 @@ import { ExtensionManifest } from '../../core/models/manifest';
 export const ManifestForTest: ExtensionManifest = {
   anchor: 'panel',
   author_name: 'test',
-  bits_enabled: false,
+  bits_enabled: true,
   can_install: true,
   config_url: 'test',
   description: 'test',

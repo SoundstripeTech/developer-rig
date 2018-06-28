@@ -91,6 +91,46 @@ export class ProductTableComponent extends Component {
       }
     });
 
+    const productTableHeader = (
+      <div className="product-table__header">
+        <div className="text-col balloon-wrapper">
+          Product Name
+          <div className="balloon">
+            Name to display for this product in your extension.
+          </div>
+        </div>
+        <div className="text-col balloon-wrapper">
+          SKU
+          <div className="balloon">
+            Unique SKU to identify this product.
+            Cannot be changed after saving.
+            Must not contain whitespace.
+          </div>
+        </div>
+        <div className="text-col balloon-wrapper">
+          Amount (in Bits)
+          <div className="balloon">
+            Amount of bits to offer this product for.
+            Must be between 1 and 10,000.
+          </div>
+        </div>
+        <div className="select-col balloon-wrapper">
+          In Development
+          <div className="balloon">
+            Setting this to yes will cause this product to not be displayed in a released extension.
+          </div>
+        </div>
+        <div className="select-col balloon-wrapper">
+          Broadcast
+          <div className="balloon">
+            Setting this to yes will notify all instances of your extension on a channel when a transaction for this product has completed.
+          </div>
+        </div>
+        <div className="button-col"></div>
+        <div className="dirty-col"></div>
+      </div>
+    );
+
     return (
       <div className="product-table">
         {this.props.error &&
@@ -101,35 +141,15 @@ export class ProductTableComponent extends Component {
         }
         {liveProducts.length > 0 &&
           <div>
-            <div className="product-table__category">
-              Live
-            </div>
-            <div className="product-table__header">
-              <div className="text-col">Product Name</div>
-              <div className="text-col">SKU</div>
-              <div className="text-col">Amount (in Bits)</div>
-              <div className="select-col">In Development</div>
-              <div className="select-col">Broadcast</div>
-              <div className="button-col"></div>
-              <div className="dirty-col"></div>
-            </div>
+            <div className="product-table__category">Live</div>
+            {productTableHeader}
             {liveProducts}
           </div>        
         }
         {deprecatedProducts.length > 0 &&
           <div>
-            <div className="product-table__category">
-              Deprecated
-            </div>
-            <div className="product-table__header">
-              <div className="text-col">Product Name</div>
-              <div className="text-col">SKU</div>
-              <div className="text-col">Amount (in Bits)</div>
-              <div className="select-col">In Development</div>
-              <div className="select-col">Broadcast</div>
-              <div className="button-col"></div>
-              <div className="dirty-col"></div>
-            </div>
+            <div className="product-table__category">Deprecated</div>
+            {productTableHeader}
             {deprecatedProducts}
           </div>
         }
