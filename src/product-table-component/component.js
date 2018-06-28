@@ -110,7 +110,7 @@ export class ProductTableComponent extends Component {
         <div className="text-col balloon-wrapper">
           Amount (in Bits)
           <div className="balloon">
-            Amount of bits to offer this product for.
+            Amount of Bits to offer this product for.
             Must be between 1 and 10,000.
           </div>
         </div>
